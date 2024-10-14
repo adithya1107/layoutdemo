@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 1s ease-out;  /* Add animation */
+}
+
+.person-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(215, 214, 214, 0.394);
+}
+
+.person-info img {
+    width: 50%;
+    object-fit: cover;
+    animation: slideInFromLeft 1s ease-out;  /* Add slide-in animation for image */
+}
+
+.person-bio {
+    padding: 20px;
+    width: 50%;
+    animation: slideInFromRight 1s ease-out;  /* Add slide-in animation for bio */
+}
+
+.person-bio h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.person-bio h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.person-bio p, .person-bio ul {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: inside square;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .person-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .person-info img {
+        width: 100%;
+        animation: slideIn 1s ease-out; /* Adjust animation for smaller screens */
+    }
+
+    .person-bio {
+        width: 100%;
+        padding: 15px;
+        animation: slideIn 1s ease-out; /* Adjust animation for smaller screens */
+    }
+    .person-bio>*{
+        padding: 0 15px 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .person-bio h2 {
+        font-size: 1.8rem;
+    }
+
+    .person-bio h3 {
+        font-size: 1.3rem;
+    }
+    .person-bio>*{
+        padding: 0 15px 0 15px;
+    }
+}
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(15, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    border-radius: 25%;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
